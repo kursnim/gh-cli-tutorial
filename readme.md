@@ -1,6 +1,6 @@
 # gh-cli-tutorial
 ## 목적
-- `gh cli` 를 통해 github를 경험한다.
+- experience `github` by `gh cli`
 ## 시작
 ### 1. 설치
 - 하기 명령으로 설치한다. 
@@ -80,15 +80,26 @@ git push
 ```
 
 ### 7. Pull Request
-- pull request
-- 
+- pr, pull request : 다른 branch나 fork로부터의 변경사항을 `pull` 할 것을 `request` 한다는 뜻. pull은 가져오기(fetch)와 병합(merge) 명령의 합이다. 개인적으로 비직관적인 작명이라 생각한다.
+
+
+```
+# pr을 생성한다. 현재 checkout된 브랜치 기준으로 pr이 생성된다.
+# pr을 생성하는 브랜치의 커밋이 1개 이상 있어야 한다. 
+# 
 gh pr create
+# pr 리스트
 gh pr list
 
+# pr 상세 보기
 gh pr view 6
+# pr 차이 보기 
 gh pr diff 6
+```
 
-merge commit 이 일반적이지만 개인 프로젝트이니 rebase로 해본다.
+### 8. merge
+
+gh pr merge
 
 
 
