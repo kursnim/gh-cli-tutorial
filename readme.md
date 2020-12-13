@@ -1,19 +1,28 @@
 # gh-cli-tutorial
-## github cli 테스트   
+## 목적
+- `gh cli` 를 통해 github를 경험한다.
+## 시작
 ### 1. 설치
-- 하기 명령으로 설치한다.
+- 하기 명령으로 설치한다. 
 ```
 choco install gh
 ```
-그외 설치 방법 : [여기](https://github.com/cli/cli#installation) 참조.  
+- choco (windows) 설치 방법 : [여기](https://chocolatey.org/install)
+- 그외 설치 방법 : [여기](https://github.com/cli/cli#installation)  
 ### 2. 설치 확인
 설치가 완료 되었으면 `refreshenv` 혹은 껐다킨 후 `gh --version` 를 통해 설치 유무를 확인.
 
 ### 3. login
+하기 명령으로 로그인하며, 선택지는 기호에 잘 고른다.
 ```
 gh auth login
+...
+✔ Logged in as kursnim
 ```
-으로 웹페이지를 통해서 인증받았고 ssh 방식을 선택.
+로그인이 완료
+```
+gh auth status
+```
 
 ### 4. 저장소 생성
 `gh repo create [repo name]` 를 통해서 저장소를 cli로 만든다. 
@@ -49,14 +58,26 @@ gh iv 1 --web
 ```
 
 ### 6. 코드 / 문서 변경
+우선, 협업에 유리한 습관을 들이기 위해 다음을 숙지한다.   
+- branch에 모든 변경을 커밋한다.
+- master는 pull request를 통한 merge commit만 한다.
+
+`git checkout -b [branch name]` 으로 브랜치를 생성과 동시에 checkout 해준다.   
+`[branch name]`은 이슈관리를 한다면 간단한기능설명, 이슈번호, assignee 가 들어가야한다. 여기서는 `test-2-kursnim` 이다.
+```
+git checkout -b test-2-kursnim
+```
+
 readme.md를 생성 및 변경 후, 커밋한다.   
-추적성 관리를 위해  커밋 메시지에 #1로 이슈 번호를 넣는 것이 중요하다.
+추적성 관리를 위해  커밋 메시지에 #2로 이슈 번호를 넣는 것이 중요하다.
 ```
 git add readme.md
 # 변경된 파일 add
-git commit -m "initial commit (#1)"
+git commit -m "6. 코드/문서 변경 (#2)"
 # 커밋
 ```
+
+
 
 
 ## 협업 환경 테스트
