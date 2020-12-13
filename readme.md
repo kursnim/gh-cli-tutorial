@@ -101,6 +101,8 @@ gh pr list
 ```
 # 파일 수정 후 
 git commit -am "fixed minor bug for (#2)"
+git push
+gh pr view [num]
 ```
 ```
 # pr 상세 보기
