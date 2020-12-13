@@ -80,17 +80,29 @@ git push
 ```
 
 ### 7. Pull Request
-- pr, pull request : 다른 branch나 fork로부터의 변경사항을 `pull` 할 것을 `request` 한다는 뜻. pull은 가져오기(fetch)와 병합(merge) 명령의 합이다. 개인적으로 비직관적인 작명이라 생각한다.
+- `pr`, pull request : 다른 branch나 fork로부터의 변경사항을 `pull` 할 것을 `request` 한다는 뜻. pull은 가져오기(fetch)와 병합(merge) 명령의 합이다. 개인적으로 비직관적인 작명이라 생각한다.
 
 
 ```
-# pr을 생성한다. 현재 checkout된 브랜치 기준으로 pr이 생성된다.
+# pr create : 현재 checkout된 브랜치 기준으로 pr이 생성된다.
 # pr을 생성하는 브랜치의 커밋이 1개 이상 있어야 한다. 
-# 
 gh pr create
 # pr 리스트
 gh pr list
-
+```
+- `pr`은 커밋이 아니라 브랜치에서 생성된다.   
+- 따라서 pr 생성 후, 커밋이 추가될 수도 있다.   
+- pr 생성 후 커밋이 추가되는 시나리오는 다음과 같다.   
+    1. merge 이전에 변경될 커밋 추가.
+    2. code review 후 결과를 반영한 커밋 추가.
+    3. conflict 가 발생해서 merge 커밋 추가.  
+     (일반적인 merge : branch -> master, 본 항목에서 기술되는 merge : master -> branch )   
+- 상기 시나리오 1번을 시도해보자.
+```
+# 파일 수정 후 
+git commit -am "fixed minor bug for (#2)"
+```
+```
 # pr 상세 보기
 gh pr view 6
 # pr 차이 보기 
