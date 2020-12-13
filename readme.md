@@ -75,7 +75,21 @@ git add readme.md
 # 변경된 파일 add
 git commit -m "6. 코드/문서 변경 (#2)"
 # 커밋
+git push
+# Push 
 ```
+
+### 7. Pull Request
+- pull request
+- 
+gh pr create
+gh pr list
+
+gh pr view 6
+gh pr diff 6
+
+merge commit 이 일반적이지만 개인 프로젝트이니 rebase로 해본다.
+
 
 
 
