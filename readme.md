@@ -78,6 +78,7 @@ git commit -m "6. 코드/문서 변경 (#2)"
 git push
 # Push 
 ```
+만약 브랜치에 이슈번호를 넣어서 사용한다면 [자동화](precommitmsg.md)할 수 있다. 
 
 ### 7. Pull Request
 - `pr`, pull request : 다른 branch나 fork로부터의 변경사항을 `pull` 할 것을 `request` 한다는 뜻. pull은 가져오기(fetch)와 병합(merge) 명령의 합이다. 개인적으로 비직관적인 작명이라 생각한다.
